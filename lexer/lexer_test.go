@@ -1,6 +1,7 @@
 package lexer
 
 import (
+	"fmt"
 	"testing"
 
 	"monkey/token"
@@ -28,7 +29,7 @@ func TestNextToken(t *testing.T) {
 
 	for i, tt := range tests {
 		tok := l.NextToken()
-
+		fmt.Printf(" %q  ", tok.Type)
 		if tok.Type != tt.expectedType {
 			t.Fatalf("tests[%d] - tokentype wrong. expected=%q, got=%q",
 				i, tt.expectedType, tok.Type)
