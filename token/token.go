@@ -30,6 +30,24 @@ const (
 	// PLUS "+"
 	PLUS = "+"
 
+	// MINUS "-"
+	MINUS = "-"
+
+	// BANG operators
+	BANG = "!"
+
+	// ASTERISK operators
+	ASTERISK = "*"
+
+	// SLASH operators
+	SLASH = "/"
+
+	// LT operators
+	LT = "<"
+
+	// GT operators
+	GT = ">"
+
 	// COMMA Delimiters"
 	COMMA = ","
 
@@ -53,11 +71,31 @@ const (
 
 	// LET keyword
 	LET = "LET"
+
+	// TRUE bool
+	TRUE = "TRUE"
+
+	// FALSE bool
+	FALSE = "FALSE"
+
+	// IF if
+	IF = "IF"
+
+	// ELSE else
+	ELSE = "ELSE"
+
+	// RETURN return
+	RETURN = "RETURN"
 )
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 // LookupIdent check
