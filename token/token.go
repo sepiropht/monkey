@@ -86,6 +86,12 @@ const (
 
 	// RETURN return
 	RETURN = "RETURN"
+
+	// EQ double eq
+	EQ = "=="
+
+	// NOTEQ negation
+	NOTEQ = "!="
 )
 
 var keywords = map[string]TokenType{
