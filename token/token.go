@@ -91,7 +91,7 @@ const (
 	EQ = "=="
 
 	// NOTEQ negation
-	NOTEQ = "!="
+	NOT_EQ = "!="
 )
 
 var keywords = map[string]TokenType{
