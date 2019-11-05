@@ -21,11 +21,13 @@ func TestNextToken(t *testing.T) {
 		} else {
 		return false;
 	 }
-
 	 10 == 10;
 	 10 != 9;
 	 "foobar"
 	 "foo bar"
+	 while (ten < 13) {
+		ten = ten + 1;
+	 }
 	 `
 
 	tests := []struct {
@@ -107,6 +109,20 @@ func TestNextToken(t *testing.T) {
 		{token.SEMICOLON, ";"},
 		{token.STRING, "foobar"},
 		{token.STRING, "foo bar"},
+		{token.WHILE, "while"},
+		{token.LPAREN, "("},
+		{token.IDENT, "ten"},
+		{token.LT, "<"},
+		{token.INT, "13"},
+		{token.RPAREN, ")"},
+		{token.LBRACE, "{"},
+		{token.IDENT, "ten"},
+		{token.ASSIGN, "="},
+		{token.IDENT, "ten"},
+		{token.PLUS, "+"},
+		{token.INT, "1"},
+		{token.SEMICOLON, ";"},
+		{token.RBRACE, "}"},
 		{token.EOF, ""},
 	}
 

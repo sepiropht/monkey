@@ -94,6 +94,8 @@ const (
 	NOT_EQ = "!="
 
 	STRING = "STRING"
+
+	WHILE = "WHILE"
 )
 
 var keywords = map[string]TokenType{
@@ -103,6 +105,7 @@ var keywords = map[string]TokenType{
 	"false":  FALSE,
 	"if":     IF,
 	"else":   ELSE,
+	"while":  WHILE,
 	"return": RETURN,
 }
 
